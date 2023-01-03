@@ -1,0 +1,613 @@
+/*--- google fonts import ---*/
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100;300;400;700&display=swap');
+
+/*--- entire page body---*/
+body{
+    background-color: #E3E3E3 !important;
+    font-family: 'Anybody', cursive;
+}
+
+/*--- navbar assets ---*/
+#navbar-self{
+    background-color: #636363;
+}
+/*--- offcanvas button---*/
+#btn-offcanvas{
+    position: absolute;
+    left: 0px;
+}
+/*--- offcanvas image logo icon ---*/
+#img-offcanvas{
+    margin: auto;
+    width: 100px;
+}
+/*--- offcanvas close button ---*/
+#btn-close-offcanvas{
+    width: 50px;
+    font-size: 30px;
+    color: #636363;
+    background-color: transparent;
+    border: 0px;
+}
+/*--- offcanvas itself ---*/
+#menu{
+    background-color: #E3E3E3;
+    padding-top: 10px;
+}
+.offcanvas-body{
+    margin-top: 30px;
+}
+.offcanvas-body > .flex-column > .nav-item {
+    margin: 10px;
+}
+.offcanvas-body > .flex-column > .nav-item > .nav-link{
+    font-family: 'Anybody', cursive;
+    color: #636363;
+    font-size: 2em;
+}
+
+/*--- form assets ---*/
+/*--- background form image ---*/
+#form-trip{
+    background-image: url(images/img-bg-form.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 500px;
+}
+/*--- own form ---*/
+#form-self{
+    width: 500px;
+    margin: 150px auto;
+    background-color: #B0ADA7;
+    padding: 20px;
+    border-radius: 10px;  
+}
+.input-group{
+    margin-bottom: 10px;
+}
+/*--- input name ---*/
+label{
+    font-family: 'Anybody', cursive;
+    color: #E3E3E3;
+}
+.input-group-text{
+    background-color: #E3E3E3 !important;
+    border-radius: 10px 0px 0px 10px !important;
+}
+/*--- inputs text style ---*/
+.form-control{
+    font-family: 'Anybody', cursive;
+    color: #636363 !important;
+    background-color: #E3E3E3 !important;
+}
+/*--- icons from each form input type ---*/
+.icon-form{
+    width: 20px;
+}
+/*--- date going and coming back ---*/
+.date-input-form{
+    background-color: #E3E3E3 !important;
+    color: #636363 !important;
+    height: 50px;
+    width: 105px;
+    margin-right: 5px;
+    border-width: 0px;
+    border-radius: 0px 10px 10px 0px !important;
+    text-align: center;
+    font-size: 0.9em;
+}
+/*--- button submit form ---*/
+#btn-buscar-form{
+    background-color: #636363 !important;
+    color: #E3E3E3 !important;
+    width: 150px;
+    height: 50px;
+    border-width: 0px;
+    border-radius: 10px;
+}
+#btn-buscar-form:hover{
+    transform: scale(1.03);
+    transition: 0.5s ease-in-out;
+}
+
+/*--- page content body ---*/
+#page-body{
+    position: relative;
+    top: 550px;
+    font-family: 'Anybody', cursive;
+    color: #636363;
+}
+
+#page-body h1{
+    font-weight: 400;
+}
+
+/*--- destinations assets ---*/
+.destinations{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/*--- national destinations assets ---*/
+.destinations-national{
+    width: 300px;
+    height: 225px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;  
+}
+.destinations-national:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in;
+}
+/*--- destination pic ---*/
+.destination-img{
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: brightness(0.60);
+}
+/*--- destination name ---*/
+.destination-name{
+    position: relative;
+    top: -200px;
+    color: #E3E3E3;
+}
+/*--- button see more each destination ---*/
+.destination-see-more{
+    position: relative;
+    top: -120px;
+    background-color: transparent;
+    color: #E3E3E3;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #E3E3E3;
+}
+.destination-see-more:hover{
+    background-color: #E3DFD7;
+    color: #636363;
+    transform: scale(1.05);
+}
+#destinations-international{
+    margin-bottom: 50px;
+}
+
+/*--- international destinations assets ---*/
+#wbn-slider {
+    position: relative;
+    height: 30vw;
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#wbn-slider:hover{
+    transform: scale(1.05);
+    transition: 0.8s ease-in-out;
+}
+.wbn-slide {
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+    height: 30vw;
+}
+/*--- destination pic ---*/
+.wbn-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    pointer-events: none;
+    border-radius: 10px;
+    filter: brightness(0.60);
+}
+.active {
+    z-index: 1000;
+}
+
+/*--- international destinations animations ---*/
+.slideInLeft {
+    animation-name: animateInLeft;
+    z-index: 1000;
+}
+.slideInRight {
+    animation-name: animateInRight;
+    z-index: 1000;
+}
+.slideOutLeft {
+    transform: translateX(-100%);
+}
+.slideOutRight {
+    transform: translateX(100%);
+}
+/*--- image coming from left ---*/
+@keyframes animateInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+/*--- image coming from right ---*/
+@keyframes animateInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+/*--- slide back and next buttons ---*/
+.wbn-buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #636363;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+}
+.wbn-slider-back-btn, .wbn-slider-next-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E3DFD7;
+    font-size: 20px;
+    opacity: 0.3;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s;
+    margin: 20px;
+}
+.wbn-slider-back-btn:hover, .wbn-slider-next-btn:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+    cursor: pointer;
+}
+/*--- text inside slide ---*/
+.wbn-overlay-text {
+    position: absolute;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #E3E3E3;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    opacity: 1;
+}
+/*--- destination name ---*/
+.wbn-header {
+    font-family: 'Anybody', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    background-color: transparent;
+    position: relative;
+    top: 120px;
+}
+.wbn-overlay-text .wbn-text {
+    font-family: 'Anybody', cursive;
+    text-align: center;
+    font-size: 10px;
+    line-height: 30px;
+    color: #E3E3E3;
+    max-width: 30%;
+}
+
+/*--- ratings assets ---*/
+#ratings{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+/*--- rating card ---*/
+.rating-card{
+    background-color: #636363;
+    width: 100%;
+    min-height: 140px;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+.rating-card:hover{
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+}
+/*--- user account ---*/
+.user-pic{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 5px;
+    background-color: #E3E3E3;
+    border-radius: 80px;
+    float: left;
+}
+.user-name{
+    color: #E3E3E3;
+    font-size: 1.5em;
+    padding-left: 130px;
+}
+.user-rate-message{
+    padding-top: 10px;
+    padding-left: 130px;
+    color: #E3E3E3;
+}
+/*--- star rate ---*/
+.fa-star{
+    width: 20px;
+}
+.checked {
+    float: right;
+    position: relative;
+    top: -40px;
+    color: orange;
+}
+/*--- see more rating button ---*/
+#ratings-see-more{
+    width: 300px; 
+    padding: 5px;
+    margin: 10px auto; 
+    display: block;
+    background-color: #636363;
+    color: #E3E3E3;
+    border-width: 0px;
+    border-radius: 5px;
+}
+#ratings-see-more:hover{
+    color: #B0ADA7;
+    transform: scale(1.05);
+}
+
+/*--- contact us assets ---*/
+#contact-us{
+    position: relative;
+    top: 550px;
+    font-family: 'Anybody', cursive;
+    color: #636363;
+    margin-bottom: 30px;
+}
+#contact-us h1{
+    font-weight: 400;
+}
+/*--- contact us formulary ---*/
+#form-contact-us{ 
+    background-color: #636363;
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    border-radius: 5px;
+}
+#form-contact-us label{
+    font-family: 'Anybody', cursive;
+    color: #E3E3E3;
+    font-size: 1.3em;
+}
+.form-contact-us{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 3px;
+    text-indent: 10px;
+    background-color: #E3E3E3;
+    color: #636363;
+}
+input[type="button"].form-contact-us{
+    color: #636363;
+    margin-bottom: 0px;
+}
+input[type="button"].form-contact-us:hover{
+    background-color: #B0ADA7;
+}
+
+/*--- footer assets ---*/
+footer{
+    position: relative;
+    top: 600px;
+    background-color: #636363;
+    color: #E3E3E3;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.7em;
+}
+
+/*--- media queries assets ---*/
+/*--- desktop screen ---*/
+@media only screen and (max-width: 1100px) and (min-width: 900px){
+    .destinations-national{
+        width: 95%;
+        height: 60%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .destination-name{
+        font-size: 1.9em;
+        top: -130px;       
+    }
+
+    .destination-see-more{      
+        top: -100px;
+    }
+
+    #wbn-slider {
+        height: 40vw;
+        width: 100%;
+    }
+
+}
+/*--- tablet screen ---*/
+@media only screen and (max-width: 899px) and (min-width: 700px){
+    .destinations{
+        grid-template-columns: auto auto;
+        row-gap: 0px;
+    }
+
+    .destinations-national{
+        width: 95%;
+        height: 65%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+
+    .destination-name{
+        font-size: 1.6em;
+        top: -110px;       
+    }
+
+    .destination-see-more{      
+        top: -90px;
+        width: 70px;
+        font-size: 0.6em;
+    }
+
+    #wbn-slider {
+        height: 40vw;
+        width: 100%;
+    }
+
+    .checked {   
+        top: 0px;
+        left: 30px;
+        float: none;
+    }
+}
+/*--- tablet screen ---*/
+@media only screen and (max-width: 699px) and (min-width: 500px){
+    #form-self{
+        width: 400px;
+        margin: 100px auto;
+    }
+    
+    .input-group-text{
+        margin: auto;
+    }
+
+    .icon-form{
+        width: 36px;
+    }
+
+    #btn-buscar-form{
+        width: 100%;
+        margin: 20px auto 0px;
+    }
+
+    .destinations{
+        grid-template-columns: auto;
+    }
+
+    #wbn-slider {
+        height: 50vw;
+        width: 450px;
+    }
+    
+    .checked {   
+        top: 0px;
+        left: 30px;
+        float: none;
+    }
+}
+/*--- smartphone screen ---*/
+@media only screen and (max-width: 499px){
+    #form-self{
+        width: 300px;
+        margin: 80px auto;
+    }
+    
+    .input-group-text{
+        width: 40px;
+        
+    }
+
+    .date-input-form{
+        
+        width: 34%;
+        margin-right: 0px;
+        margin: auto;
+        
+    }
+
+    .icon-form{
+        width: 20px;
+        margin: 0px;
+    }
+
+    #btn-buscar-form{
+        width: 100%;
+        margin: 20px auto 0px;
+    }
+    
+    .destinations{
+        grid-template-columns: auto;
+    }
+
+    .destinations-national{
+        max-width: 300px;
+    }
+
+
+    #wbn-slider {
+        height: 70vw;
+        width: 300px;
+    }
+
+    .wbn-header { 
+        font-size: 40px;
+    }
+
+    #ratings{
+        width: 80%;
+        text-align: center;      
+    }
+    
+    .rating-card{
+        
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    
+    .user-pic{
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        padding: 5px;
+        
+        float: none;
+    }
+    
+    .user-name{
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+    
+    .user-rate-message{
+        padding-left: 0px;
+    }
+    
+    .checked {
+        float: none;
+        top: 0px;
+    }
+}

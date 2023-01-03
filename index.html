@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="images/logo-site.svg" type="image/x-icon">
+    <!-- import external css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- import bootstrap css and JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- import rating stars library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Viagens.com</title>
+</head>
+<body>
+    <section id="navbar"> <!-- navbar and offcanvas -->
+
+        <div class="offcanvas offcanvas-start" id="menu"> <!-- offcanvas -->
+
+            <div class="offcanvas-header"> <!-- offcanvas logo and close button -->
+
+              <img id="img-offcanvas" class="offcanvas-title" src="images/logo-site.svg" alt="">
+              <button type="button" id="btn-close-offcanvas" data-bs-dismiss="offcanvas">X</button>
+            
+            </div>
+            
+            <div class="offcanvas-body"> <!-- offcanvas body content -->
+
+                <ul class="nav nav-tabs flex-column"> <!-- offcanvas nav links -->
+                    <li class="nav-item"><a href="" class="nav-link bg-transparent">SOBRE NÓS</a></li>
+                    <li class="nav-item"><a href="" class="nav-link bg-transparent">SAIBA MAIS</a></li>
+                    <li class="nav-item"><a href="" class="nav-link bg-transparent">CONTATO</a></li>
+                    <li class="nav-item"><a href="" class="nav-link bg-transparent">FAQ</a></li>
+                </ul>
+
+            </div>
+
+        </div>       
+        
+        <nav id="navbar-self" class="navbar navbar-expand-sm justify-content-center fixed-top"> <!-- navbar -->
+
+            <button id="btn-offcanvas" class="btn bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"><img src="images/burguer-bar.svg" alt=""></button> <!-- offcanvas open burger button -->
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><img src="images/logo-site.svg" alt="logo"></li> <!-- page logo airplane --> 
+            </ul>
+
+        </nav>
+        
+    </section>
+    <section id="form-trip"> <!-- trip formulary -->
+        
+        <form action="form-trip" id="form-self"> <!-- form itself -->
+
+            <label for="">De onde você está saindo?</label> <!-- going from input information -->
+            <div class="input-group">
+                <span class="input-group-text"><img class="icon-form" src="images/icon-plane-form.svg" alt="icon-plane"></span> <!-- plane icon -->
+                <input type="text" class="form-control" placeholder="Busque um aeroporto"> <!-- text input -->
+            </div>
+
+            <label for="">Para onde você quer ir?</label> <!-- going to input information -->
+            <div class="input-group">
+                <span class="input-group-text"><img class="icon-form" src="images/icon-pin-form.svg" alt="icon-pin"></span> <!-- pin icon -->
+                <input type="text" class="form-control" placeholder="Busque uma cidade, aeroporto ou hotel"> <!-- text input -->
+            </div>
+
+            <label for="quando">Quando?</label> <!-- when going and getting back -->
+            <div class="input-group">
+                <span class="input-group-text"><img class="icon-form calendar-img" src="images/icon-calendar-form.svg" alt="icon-calendar"></span> <!-- calendar icon -->
+                <input type="text" class="date-input-form calendar" placeholder="Ida" onfocus="(this.type='date')" onblur="(this.type='text')"> <!-- going date input -->
+                <span class="input-group-text"><img class="icon-form calendar-img" src="images/icon-calendar-form.svg" alt="icon-calendar"></span> <!-- calendar icon -->
+                <input type="text" class="date-input-form calendar" placeholder="Volta" onfocus="(this.type='date')" onblur="(this.type='text')"> <!-- getting back date input -->
+                <input type="button" value="BUSCAR PACOTES" id="btn-buscar-form"> <!-- button submit form -->
+            </div>
+
+        </form>
+
+    </section>
+    <section id="page-body" class="container"> <!-- page main content -->
+        <h1>Destinos nacionais</h1> <!-- section title -->
+        <div class="destinations"> <!-- national destinations grid -->
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/sao-paulo.jpg.jpg" alt="são paulo"> <!-- destination pic -->
+                <h1 class="destination-name">São Paulo</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/rio-de-janeiro.jgp.jpg" alt="rio de janeiro"> <!-- destination pic -->
+                <h1 class="destination-name">Rio de Janeiro</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/maceio.jpg.jpg" alt="maceió"> <!-- destination pic -->
+                <h1 class="destination-name">Maceió</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/porto-alegre.jpg" alt="porto alegre"> <!-- destination pic -->
+                <h1 class="destination-name">Porto Alegre</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/bh.jpg" alt="belo horizonte"> <!-- destination pic -->
+                <h1 class="destination-name">Belo Horizonte</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+            <div class="destinations-national"> <!-- destination item -->
+                <img class="destination-img" src="images/fortaleza,jpg.jpg" alt="fortaleza"> <!-- destination pic -->
+                <h1 class="destination-name">Fortaleza</h1> <!-- destination name -->
+                <input type="button" class="destination-see-more" value="Veja Mais"> <!-- destination see more button -->
+            </div>
+        </div>
+
+        <h1>Destinos internacionais</h1> <!-- section title -->
+        <div id="destinations-international"> <!-- international destinations carousel -->
+            <div id="wbn-slider"> <!-- destination itens wrapper -->
+                <div class="wbn-slide"> <!-- destination item -->
+                    <img src="images/buenos-aires.jpg"> <!-- destination pic -->
+                    <div class="wbn-overlay-text">
+                        <span class="wbn-header">Buenos Aires</span> <!-- destination name -->
+                    </div>
+                </div>
+                <div class="wbn-slide"> <!-- destination item -->
+                    <img src="images/londres.jpg"> <!-- destination pic -->
+                    <div class="wbn-overlay-text">
+                        <span class="wbn-header">Londres</span> <!-- destination name -->
+                    </div>
+                </div>
+                <div class="wbn-slide active"> <!-- destination item -->
+                    <img src="images/seoul.jpg"> <!-- destination pic -->
+                    <div class="wbn-overlay-text">
+                        <span class="wbn-header">Seoul</span> <!-- destination name -->
+                    </div>
+                </div>
+                <div class="wbn-slide"> <!-- destination item -->
+                    <img src="images/paris.jpg"> <!-- destination pic -->
+                    <div class="wbn-overlay-text">
+                        <span class="wbn-header">Paris</span> <!-- destination name -->
+                    </div>
+                </div>
+                <div class="wbn-slide"> <!-- destination item -->
+                    <img src="images/madrid.jpg"> <!-- destination pic -->
+                    <div class="wbn-overlay-text">
+                        <span class="wbn-header">Madrid</span> <!-- destination name -->
+                    </div>
+                </div>
+                <div class="wbn-buttons"> <!-- next and previous carousel buttons -->
+                    <div class="wbn-slider-back-btn"> 
+                        <span>◀</span>
+                    </div>
+                    <div class="wbn-slider-next-btn">
+                        <span>▶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Veja avaliações dos nossos clientes</h1> <!-- section title -->
+        <div id="ratings"> <!-- clients ratings -->
+            <div class="rating-card"> <!-- rating card -->
+                <img class="user-pic" src="images/user-icon-empty.png" alt=""> <!-- user profile pic -->
+                <h2 class="user-name">User2856149</h2> <!-- user name -->
+                <div class="user-rate-stars"> <!-- stars rated -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="user-rate-message">Ótima empresa, serviço muito bom! A melhor viagem da minha vida</p> <!-- user rate message -->
+            </div>
+
+            <div class="rating-card"> <!-- rating card -->
+                <img class="user-pic" src="images/user-icon-female.jpg" alt=""> <!-- user profile pic -->
+                <h2 class="user-name">Maya Artemis</h2> <!-- user name -->
+                <div class="user-rate-stars"> <!-- stars rated -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="user-rate-message">Muito obrigada! Preços muito bons e trabalho muito bem feito! Amei meu pacote de viagem</p> <!-- user rate message -->
+            </div>
+
+            <div class="rating-card"> <!-- rating card -->
+                <img class="user-pic" src="images/user-icon-male.jpg" alt=""> <!-- user profile pic -->
+                <h2 class="user-name">Geraldo Marques</h2> <!-- user name -->
+                <div class="user-rate-stars"> <!-- stars rated -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p class="user-rate-message">bom serviço, mas pode melhorar</p> <!-- user rate message -->
+            </div>
+
+            
+            <div id="rating-card-hidden" style="display: none;"> <!-- previously hidden ratings -->
+                <div class="rating-card"> <!-- rating card -->
+                    <img class="user-pic" src="images/user-icon-empty.png" alt=""> <!-- user profile pic -->
+                    <h2 class="user-name">Bruno Henrique</h2> <!-- user name -->
+                    <div class="user-rate-stars"> <!-- stars rated -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div> 
+                    <p class="user-rate-message">Parabens a empresa, recomendo</p> <!-- user rate message -->
+                </div>
+
+                <div class="rating-card"> <!-- rating card -->
+                    <img class="user-pic" src="images/user-icon-empty.png" alt=""> <!-- user profile pic -->
+                    <h2 class="user-name">User91346189</h2> <!-- user name -->
+                    <div class="user-rate-stars"> <!-- stars rated -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="user-rate-message">Gostei muito, pretenco comprar mais pacotes!</p> <!-- user rate message -->
+                </div>
+
+                <div class="rating-card"> <!-- rating card -->
+                    <img class="user-pic" src="images/user-icon-empty.png" alt=""> <!-- user profile pic -->
+                    <h2 class="user-name">Maria Santos</h2> <!-- user name -->
+                    <div class="user-rate-stars"> <!-- stars rated -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="user-rate-message">Serviço ok, gostaria de ter recebido mais atenção, fora isso, o serviço foi ok</p> <!-- user rate message -->
+                </div>
+            </div>
+
+            <input id="ratings-see-more" type="button" value="Ver mais"> <!-- see more ratings button -->
+        </div>
+    </section>
+    <section id="contact-us" class="container"> <!-- contact us formulary -->
+        <h1>Fale conosco </h1> <!-- section title -->
+        <form action="form-contact-us" id="form-contact-us">
+
+            <label for="nome">Nome</label> 
+            <div class="input-contact-us">
+                <input type="text" class="form-contact-us" placeholder="Informe seu nome"> <!-- input name contact us form -->
+            </div>
+
+            <label for="email">Email</label>
+            <div class="input-contact-us">
+                <input type="email" class="form-contact-us" placeholder="Informe seu email"> <!-- input email contact us form -->
+            </div>
+
+            <label for="mensagem">Mensagem</label>
+            <div class="input-contact-us">
+                <textarea name="mensagem" class="form-contact-us" cols="30" rows="5" placeholder="Mensagem"></textarea> <!-- input text message contact us form -->
+            </div>
+
+            <input class="form-contact-us" type="button" value="Enviar"> <!-- submit button contact us form -->
+            
+        </form>
+
+    </section>
+    <footer>All Rights Reserved. Developed by: Rendryki Melo - 2023 ®</footer> <!-- page footer -->
+    
+    <!-- import external JavaScript -->
+    <script src="code.js"></script> 
+</body>
+</html>
